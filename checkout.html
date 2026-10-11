@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout | ShopWave</title>
+  <meta name="description" content="Enter your delivery details to place your order.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">Shop<span>Wave</span></a>
+
+    <button class="menu-button" id="menu-button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="cart.html" class="cart-link active">Cart <span id="cart-count">0</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="page-heading">
+    <div class="container">
+      <h1>Checkout</h1>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="empty-message" id="empty-checkout" hidden>
+        <p>There is nothing to check out yet.</p>
+        <a href="shop.html" class="btn">Go to the shop</a>
+      </div>
+
+      <div class="checkout-layout" id="checkout-layout">
+
+        <form id="checkout-form" novalidate>
+          <h2>Delivery details</h2>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="full-name">Full name</label>
+              <input type="text" id="full-name" autocomplete="name">
+              <p class="field-error" id="full-name-error"></p>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" autocomplete="email">
+              <p class="field-error" id="email-error"></p>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" autocomplete="tel">
+              <p class="field-error" id="phone-error"></p>
+            </div>
+            <div class="field">
+              <label for="city">City</label>
+              <input type="text" id="city" autocomplete="address-level2">
+              <p class="field-error" id="city-error"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="address">Address</label>
+            <input type="text" id="address" autocomplete="street-address">
+            <p class="field-error" id="address-error"></p>
+          </div>
+
+          <h2>Payment</h2>
+          <p class="muted">This is a practice store, so no payment details are collected.</p>
+          <label class="radio-line"><input type="radio" name="payment" value="Cash on delivery" checked> Cash on delivery</label>
+          <label class="radio-line"><input type="radio" name="payment" value="Pay by card on delivery"> Pay by card on delivery</label>
+
+          <button type="submit" class="btn" style="margin-top:16px;">Place order</button>
+        </form>
+
+        <aside class="summary-box">
+          <h2>Your order</h2>
+          <div id="order-lines"></div>
+          <div class="summary-row"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+          <div class="summary-row" id="discount-row" hidden><span>Discount (10%)</span><span id="discount">-$0.00</span></div>
+          <div class="summary-row"><span>Delivery</span><span id="shipping">$0.00</span></div>
+          <div class="summary-row summary-total"><span>Total</span><span id="total">$0.00</span></div>
+        </aside>
+
+      </div>
+
+      <div class="success-box" id="success-box" hidden>
+        <h2>Thank you for your order!</h2>
+        <p class="order-number" id="order-number"></p>
+        <p>We have saved your details and will send a confirmation email to <strong id="success-email"></strong>.</p>
+        <p class="muted">This is a practice project, so nothing will actually be delivered.</p>
+        <a href="shop.html" class="btn">Continue shopping</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>ShopWave</h3>
+        <p>Everyday things for your home, your wardrobe and your weekend. This is a practice project, so no real orders are taken.</p>
+      </div>
+      <div>
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="shop.html?category=Home">Home</a></li>
+          <li><a href="shop.html?category=Fashion">Fashion</a></li>
+          <li><a href="shop.html?category=Tech">Tech</a></li>
+          <li><a href="shop.html?category=Outdoor">Outdoor</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Help</h3>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="about.html#contact">Contact</a></li>
+          <li><a href="cart.html">Your cart</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 ShopWave. A practice project.</p>
+  </div>
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>

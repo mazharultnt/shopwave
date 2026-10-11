@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShopWave | Everyday things for home, style and weekends</title>
+  <meta name="description" content="ShopWave is a small online store for home goods, fashion, tech and outdoor gear.">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">Shop<span>Wave</span></a>
+
+    <button class="menu-button" id="menu-button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+        <a href="index.html" class="active">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="cart.html" class="cart-link">Cart <span id="cart-count">0</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <h1>Everyday things, chosen with care</h1>
+        <p>Simple, useful products for your home, your wardrobe and your weekends. Free delivery on orders over $100.</p>
+        <div class="hero-buttons">
+          <a href="shop.html" class="btn">Shop now</a>
+          <a href="about.html" class="btn btn-outline">Our story</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/hero-banner.jpg" alt="A bright living room with ShopWave home products" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Shop by category</h2>
+      <div class="category-grid" id="category-grid"></div>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container">
+      <h2 class="section-title">Featured products</h2>
+      <div class="product-grid" id="featured-products"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="points">
+        <div class="point">
+          <h3>Free delivery over $100</h3>
+          <p class="muted">Orders under $100 have a flat $6 delivery fee.</p>
+        </div>
+        <div class="point">
+          <h3>30-day returns</h3>
+          <p class="muted">Changed your mind? Send it back within 30 days.</p>
+        </div>
+        <div class="point">
+          <h3>Friendly support</h3>
+          <p class="muted">Questions about an order? Write to us any time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container">
+      <h2>Get 10% off your first order</h2>
+      <p class="muted">Join our newsletter. Enter the code <strong>WAVE10</strong> in your cart to try the discount.</p>
+      <form class="newsletter-form" id="newsletter-form" novalidate>
+        <input type="email" id="newsletter-email" placeholder="Your email address" aria-label="Email address">
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+      <p class="field-error" id="newsletter-message" role="status"></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>ShopWave</h3>
+        <p>Everyday things for your home, your wardrobe and your weekend. This is a practice project, so no real orders are taken.</p>
+      </div>
+      <div>
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="shop.html?category=Home">Home</a></li>
+          <li><a href="shop.html?category=Fashion">Fashion</a></li>
+          <li><a href="shop.html?category=Tech">Tech</a></li>
+          <li><a href="shop.html?category=Outdoor">Outdoor</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Help</h3>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="about.html#contact">Contact</a></li>
+          <li><a href="cart.html">Your cart</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 ShopWave. A practice project.</p>
+  </div>
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
