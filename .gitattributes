@@ -1,0 +1,5 @@
+# Exclude HTML files from GitHub language statistics calculation
+*.html linguist-detectable=false
+
+# Override language detection to highlight JavaScript as the main language
+*.js linguist-detectable=true
